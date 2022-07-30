@@ -116,12 +116,19 @@ function submitDinero() {
 function eventoBoton1() {
   let resto = dinero.value - frutilla;
   if (resto < 0) {
-    alert(
-      "No tenes suficiente dinero para comprarte ese helado, selecciona otro"
-    );
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No tienes dinero',
+    })
   } else {
     dinero = resto;
-    alert(`El monto que te sobra es de ${dinero}`);
+    Swal.fire({
+      icon: 'success',
+      title: 'Hurra!',
+      text: 'Pudiste comprarlo',
+    });
+    divcash.innerHTML = `El monto que te sobra es de ${dinero}`
   }
   sessionStorage.setItem("Frutilla", "Has seleccionado frutilla");
 }
@@ -129,12 +136,19 @@ function eventoBoton1() {
 function eventoBoton2() {
   let resto = dinero.value - combinado;
   if (resto < 0) {
-    alert(
-      "No tenes suficiente dinero para comprarte ese helado, selecciona otro"
-    );
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No tienes dinero',
+    })
   } else {
     dinero = resto;
-    alert(`El monto que te sobra es de ${dinero}`);
+    Swal.fire({
+      icon: 'success',
+      title: 'Hurra!',
+      text: 'Pudiste comprarlo',
+    });
+    divcash.innerHTML = `El monto que te sobra es de ${dinero}`
   }
   sessionStorage.setItem("Combinado", "Has seleccionado combinado");
 }
@@ -142,12 +156,19 @@ function eventoBoton2() {
 function eventoBoton3() {
   let resto = dinero.value - granizado;
   if (resto < 0) {
-    alert(
-      "No tenes suficiente dinero para comprarte ese helado, selecciona otro"
-    );
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No tienes dinero',
+    })
   } else {
     dinero = resto;
-    alert(`El monto que te sobra es de ${dinero}`);
+    Swal.fire({
+      icon: 'success',
+      title: 'Hurra!',
+      text: 'Pudiste comprarlo',
+    });
+    divcash.innerHTML = `El monto que te sobra es de ${dinero}`
   }
   sessionStorage.setItem("Granizado", "Has seleccionado granizado");
 }
@@ -159,7 +180,6 @@ function eventoBoton4() {
       icon: 'error',
       title: 'Oops...',
       text: 'No tienes dinero',
-      footer: '<a href="">Why do I have this issue?</a>'
     })
   } else {
     dinero = resto;
@@ -167,7 +187,6 @@ function eventoBoton4() {
       icon: 'success',
       title: 'Hurra!',
       text: 'Pudiste comprarlo',
-      footer: '<a href="">Why do I have this issue?</a>'
     });
     divcash.innerHTML = `El monto que te sobra es de ${dinero}`
   }
