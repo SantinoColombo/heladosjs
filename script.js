@@ -100,7 +100,7 @@ let frutilla = 300;
 let combinado = 450;
 let granizado = 600;
 let chocolate = 350;
-// let dinero = parseInt(prompt("Cuanto dinero tienes para gastar?"));
+
 
 dineroSubmit.addEventListener("click", submitDinero);
 boton1.addEventListener("click", eventoBoton1);
